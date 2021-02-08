@@ -1,0 +1,416 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: rgb(255, 246, 230);
+}
+
+h1 {
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.box {
+  width: 20vw;
+  height: 20vw;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: block;
+}
+
+.edge1 {
+  width: 100px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.edge2 {
+  width: 100px;
+  height: 1px;
+  background-color: #000;
+  transform: translateX(-100%);
+  animation-name: horizontal-line;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes horizontal-line {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.edge3 {
+  height: 100px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.edge4 {
+  height: 100px;
+  width: 1px;
+  background-color: #000;
+  animation: vertical-line 2.5s ease-in-out infinite;
+}
+
+@keyframes vertical-line {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  33% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+    background-color: rgb(255, 103, 103);
+  }
+}
+
+.h-oval {
+  height: 40px;
+  width: 20px;
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: dot-scroll ease infinite 1.5s;
+}
+
+@keyframes dot-scroll {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(150%);
+  }
+}
+
+.scale-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #ffaeed;
+  border-radius: 50%;
+  animation: scale-circle-anim ease-in-out 1.5s infinite;
+}
+
+@keyframes scale-circle-anim {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.dotwrapper {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dot-bump {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.dot1 {
+  background-color: rgb(248, 134, 134);
+  animation: dot-bump 1s ease-in-out infinite;
+}
+
+.dot2 {
+  background-color: rgb(134, 225, 248);
+  animation: dot-bump 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.dot3 {
+  background-color: rgb(199, 248, 134);
+  animation: dot-bump 1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes dot-bump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.color-dot-base {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: rgb(255, 125, 125); */
+}
+
+.dot4 {
+  animation: to-right 1s ease-in-out infinite;
+}
+
+.dot5 {
+  animation: to-bottom 1s ease-in-out infinite;
+  /* animation-delay: 1s; */
+}
+
+.dot6 {
+  animation: to-left 1s ease-in-out infinite;
+}
+
+.dot7 {
+  animation: to-up 1s ease-in-out infinite;
+}
+
+@keyframes to-right {
+  0% {
+    transform: translate(-50%, -100%);
+    background-color: rgb(248, 134, 134);
+  }
+
+  100% {
+    transform: translate(150%, -100%);
+    /* background-color: rgb(134, 225, 248); */
+    opacity: 0;
+  }
+}
+
+@keyframes to-bottom {
+  0% {
+    transform: translate(150%, -100%);
+    background-color: rgb(134, 225, 248);
+  }
+
+  100% {
+    transform: translate(150%, 100%);
+    opacity: 0;
+  }
+}
+
+@keyframes to-left {
+  0% {
+    transform: translate(150%, 100%);
+    background-color: rgb(199, 248, 134);
+  }
+
+  100% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+@keyframes to-up {
+  0% {
+    transform: translate(-50%, 100%);
+    background-color: rgb(190, 109, 201);
+  }
+
+  100% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+}
+
+.dot8 {
+  animation: right-edge 1s ease-in-out infinite;
+}
+
+.dot9 {
+  animation: bottom-edge 1s ease-in-out infinite;
+  /* animation-delay: 1s; */
+}
+
+.dot10 {
+  animation: left-edge 1s ease-in-out infinite;
+}
+
+@keyframes right-edge {
+  0% {
+    transform: translate(-50%, -130%);
+    background-color: rgb(248, 134, 134);
+  }
+
+  100% {
+    transform: translate(150%, 152%);
+  }
+}
+
+@keyframes bottom-edge {
+  0% {
+    transform: translate(150%, 152%);
+    background-color: rgb(134, 225, 248);
+  }
+
+  100% {
+    transform: translate(-250%, 152%);
+  }
+}
+
+@keyframes left-edge {
+  0% {
+    transform: translate(-250%, 152%);
+    background-color: rgb(199, 248, 134);
+  }
+
+  100% {
+    transform: translate(-50%, -130%);
+  }
+}
+
+
+.dot11 {
+  animation: red-dot 4s ease-in-out infinite;
+  background-color: rgb(248, 134, 134);
+}
+
+.dot12 {
+  animation: blue-dot 4s ease-in-out infinite;
+  background-color: rgb(134, 225, 248);
+}
+
+.dot13 {
+  animation: green-dot 4s ease-in-out infinite;
+  background-color: rgb(199, 248, 134);
+}
+
+.dot14 {
+  animation: purple-dot 4s ease-in-out infinite;
+  background-color: rgb(190, 109, 201);
+}
+
+@keyframes red-dot {
+
+  0% {
+    transform: translate(-50%, -100%);
+  }
+
+  25% {
+    transform: translate(150%, -100%);
+  }
+
+  50% {
+    transform: translate(150%, 100%);
+  }
+
+  75% {
+    transform: translate(-50%, 100%);
+  }
+
+  100% {
+    transform: translate(-50%, -100%);
+  }
+
+}
+
+@keyframes blue-dot {
+
+  0% {
+    transform: translate(150%, -100%);
+  }
+
+  25% {
+    transform: translate(150%, 100%);
+  }
+
+  50% {
+    transform: translate(-50%, 100%);
+  }
+
+  75% {
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    transform: translate(150%, -100%);
+  }
+
+}
+
+@keyframes green-dot {
+
+  0% {
+    transform: translate(150%, 100%);
+  }
+
+  25% {
+    transform: translate(-50%, 100%);
+  }
+
+  50% {
+    transform: translate(-50%, -100%);
+  }
+
+  75% {
+    transform: translate(150%, -100%);
+  }
+
+  100% {
+    transform: translate(150%, 100%);
+  }
+
+}
+
+@keyframes purple-dot {
+
+  0% {
+    transform: translate(-50%, 100%);
+  }
+
+  25% {
+    transform: translate(-50%, -100%);
+  }
+
+  50% {
+    transform: translate(150%, -100%);
+  }
+
+  75% {
+    transform: translate(150%, 100%);
+  }
+
+  100% {
+    transform: translate(-50%, 100%);
+  }
+
+}
