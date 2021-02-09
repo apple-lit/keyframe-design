@@ -414,3 +414,72 @@ span {
   }
 
 }
+
+.dot15 {
+  animation: right-edge-dot 4s ease-in-out infinite;
+  background-color: rgb(248, 134, 134);
+}
+
+.dot16 {
+  animation: bottom-edge-dot 4s ease-in-out infinite;
+  background-color: rgb(134, 225, 248);
+}
+
+.dot17 {
+  animation: left-edge-dot 4s ease-in-out infinite;
+  background-color: rgb(199, 248, 134);
+}
+
+@keyframes right-edge-dot {
+  0% {
+    transform: translate(-50%, -130%);
+  }
+
+  33% {
+    transform: translate(150%, 152%);
+  }
+
+  67% {
+    transform: translate(-250%, 152%);
+  }
+
+  100% {
+    transform: translate(-50%, -130%);
+  }
+}
+
+@keyframes bottom-edge-dot {
+  0% {
+    transform: translate(150%, 152%);
+  }
+
+  33% {
+    transform: translate(-250%, 152%);
+  }
+
+  67% {
+    transform: translate(-50%, -130%);
+  }
+
+  100% {
+    transform: translate(150%, 152%);
+  }
+}
+
+@keyframes left-edge-dot {
+  0% {
+    transform: translate(-250%, 152%);
+  }
+
+  33% {
+    transform: translate(-50%, -130%);
+  }
+
+  67% {
+    transform: translate(150%, 152%);
+  }
+
+  100% {
+    transform: translate(-250%, 152%);
+  }
+}
