@@ -488,5 +488,26 @@ span {
   width: 120px;
   height: 15px;
   background-color: rgb(0, 31, 97);
-  border-radius: 30px;
+  border-radius: 100px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.loading-bar {
+  width: 180px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: rgb(179, 244, 255);
+  transform: translateX(-100%);
+  animation: loading-bar-animation-1 ease-in-out 10s infinite;
+}
+
+@keyframes loading-bar-animation-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
